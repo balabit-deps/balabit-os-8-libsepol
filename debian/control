@@ -3,7 +3,8 @@ VCS-Git: https://salsa.debian.org/selinux-team/libsepol.git
 VCS-Browser: https://salsa.debian.org/selinux-team/libsepol
 Priority: optional
 Section: libs
-Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Uploaders: Laurent Bigonville <bigon@debian.org>, Russell Coker <russell@coker.com.au>
 Standards-Version: 4.4.1
 Build-Depends: debhelper (>= 12), file, flex

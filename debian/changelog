@@ -1,3 +1,29 @@
+libsepol (3.0-1ubuntu0.1) focal-security; urgency=medium
+
+  * SECURITY UPDATE: use-after-free in __cil_verify_classperms
+    - debian/patches/CVE-2021-36084.patch: alter destruction of
+      classperms list when resetting classpermission by avoiding
+      deleting the inner data in cil/src/cil_reset_ast.c
+    - CVE-2021-36084
+  * SECURITY UPDATE: use-after-free in __cil_verify_classperms
+    - debian/patches/CVE-2021-36085.patch: alter destruction of
+      classperms when resetting a perm by avoiding
+      deleting the inner data in cil/src/cil_reset_ast.c
+    - CVE-2021-36085
+  * SECURITY UPDATE: use-after-free in cil_reset_classpermission
+    - debian/patches/CVE-2021-36086.patch: prevent 
+      cil_reset_classperms_set from resetting classpermission by
+      setting it to NULL in cil/src/cil_reset_ast.c
+    - CVE-2021-36086
+  * SECURITY UPDATE: heap-based buffer over-read in ebitmap_match_any
+    - debian/patches/CVE-2021-36087.patch: check if a tunable
+      declaration, in-statement, block, blockabstract, or macro definition
+      is found within an optional in cil/src/cil_build_ast.c and 
+      cil/src/cil_resolve_ast.c
+    - CVE-2021-36087
+
+ -- David Fernandez Gonzalez <david.fernandezgonzalez@canonical.com>  Tue, 26 Apr 2022 11:21:29 +0200
+
 libsepol (3.0-1) unstable; urgency=medium
 
   * New upstream release
